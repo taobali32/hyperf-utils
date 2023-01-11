@@ -10,8 +10,7 @@ require '../src/Utils/Http.php';
 try {
 
     $http = new Http();
-
-    $uri = "xxx";
+    $uri = 'xxx';
     $res = $http->get($uri);
 
     var_dump(111);
