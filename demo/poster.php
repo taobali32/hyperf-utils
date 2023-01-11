@@ -26,7 +26,7 @@ $qrCode = QrCode::create($reg_addrss)
 
 $result = $writer->write($qrCode);
 
-$post_background = "https://.cos.ap-nanjing.myqcloud.com/bizhi.jpg";
+$post_background = "https://shiyan-1314057598.cos.ap-nanjing.myqcloud.com/bizhi.jpg";
 
 $poster = new Poster($post_background);
 
@@ -37,3 +37,5 @@ $d[] = $url . $poster
         ->output('a.png',1);
 
 var_dump($d);
+
+// cv in show  https://tool.jisuapi.com/base642pic.html
