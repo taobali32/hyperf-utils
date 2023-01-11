@@ -4,56 +4,108 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "611d798731c462546ddd6db13179b4fe",
+    "content-hash": "5849ecc69d6bd162f97428a1505575b6",
     "packages": [
         {
-            "name": "bluestone/tree",
-            "version": "v1.0.2",
+            "name": "bacon/bacon-qr-code",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bluestonelab/tree.git",
-                "reference": "9e4fa8955d7ebca6bc6d8d303b7f0b7eef5fc951"
+                "url": "https://github.com/Bacon/BaconQrCode.git",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bluestonelab/tree/zipball/9e4fa8955d7ebca6bc6d8d303b7f0b7eef5fc951",
-                "reference": "9e4fa8955d7ebca6bc6d8d303b7f0b7eef5fc951",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/8674e51bb65af933a5ffaf1c308a660387c35c22",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.1"
+                "dasprid/enum": "^1.0.3",
+                "ext-iconv": "*",
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "marcocesarato/php-conventional-changelog": "^1.15",
-                "phpunit/phpunit": "^9.5.10",
-                "squizlabs/php_codesniffer": "^3.7"
+                "phly/keep-a-changelog": "^2.1",
+                "phpunit/phpunit": "^7 | ^8 | ^9",
+                "spatie/phpunit-snapshot-assertions": "^4.2.9",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "suggest": {
+                "ext-imagick": "to generate QR code images"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Bluestone\\Tree\\": "src/"
+                    "BaconQrCode\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-2-Clause"
             ],
             "authors": [
                 {
-                    "name": "William",
-                    "email": "work@suppo.fr"
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
                 }
             ],
-            "description": "Build tree data structure",
+            "description": "BaconQrCode is a QR code generator for PHP.",
+            "homepage": "https://github.com/Bacon/BaconQrCode",
+            "support": {
+                "issues": "https://github.com/Bacon/BaconQrCode/issues",
+                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
+            },
+            "time": "2022-12-07T17:46:57+00:00"
+        },
+        {
+            "name": "dasprid/enum",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DASPRiD/Enum.git",
+                "reference": "5abf82f213618696dda8e3bf6f64dd042d8542b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/5abf82f213618696dda8e3bf6f64dd042d8542b2",
+                "reference": "5abf82f213618696dda8e3bf6f64dd042d8542b2",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7 | ^8 | ^9",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DASPRiD\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "https://dasprids.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP 7.1 enum implementation",
             "keywords": [
-                "data",
-                "tree"
+                "enum",
+                "map"
             ],
             "support": {
-                "issues": "https://github.com/bluestonelab/tree/issues",
-                "source": "https://github.com/bluestonelab/tree/tree/v1.0.2"
+                "issues": "https://github.com/DASPRiD/Enum/issues",
+                "source": "https://github.com/DASPRiD/Enum/tree/1.0.3"
             },
-            "time": "2022-11-25T12:24:09+00:00"
+            "time": "2020-10-02T16:03:48+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -145,6 +197,81 @@
                 }
             ],
             "time": "2022-10-20T09:10:12+00:00"
+        },
+        {
+            "name": "endroid/qr-code",
+            "version": "4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endroid/qr-code.git",
+                "reference": "027522766a7bb40e15686fd380b77e0aaa76b7d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endroid/qr-code/zipball/027522766a7bb40e15686fd380b77e0aaa76b7d4",
+                "reference": "027522766a7bb40e15686fd380b77e0aaa76b7d4",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^2.0.5",
+                "php": "^8.0"
+            },
+            "conflict": {
+                "khanamiryan/qrcode-detector-decoder": "^1.0.6"
+            },
+            "require-dev": {
+                "endroid/quality": "dev-master",
+                "ext-gd": "*",
+                "khanamiryan/qrcode-detector-decoder": "^1.0.4||^2.0.2",
+                "setasign/fpdf": "^1.8.2"
+            },
+            "suggest": {
+                "ext-gd": "Enables you to write PNG images",
+                "khanamiryan/qrcode-detector-decoder": "Enables you to use the image validator",
+                "roave/security-advisories": "Makes sure package versions with known security issues are not installed",
+                "setasign/fpdf": "Enables you to use the PDF writer"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Endroid\\QrCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen van den Enden",
+                    "email": "info@endroid.nl"
+                }
+            ],
+            "description": "Endroid QR Code",
+            "homepage": "https://github.com/endroid/qr-code",
+            "keywords": [
+                "code",
+                "endroid",
+                "php",
+                "qr",
+                "qrcode"
+            ],
+            "support": {
+                "issues": "https://github.com/endroid/qr-code/issues",
+                "source": "https://github.com/endroid/qr-code/tree/4.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/endroid",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-12T16:10:52+00:00"
         },
         {
             "name": "guzzlehttp/command",
@@ -1615,6 +1742,52 @@
                 "source": "https://github.com/hyperf/hyperf"
             },
             "time": "2023-01-04T11:57:10+00:00"
+        },
+        {
+            "name": "jtar/poster",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/taobali32/poster.git",
+                "reference": "481d974525abad59d3af6cc323129d56f4f51bc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/taobali32/poster/zipball/481d974525abad59d3af6cc323129d56f4f51bc1",
+                "reference": "481d974525abad59d3af6cc323129d56f4f51bc1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.6.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fairy\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "jtar",
+                    "email": "3196672779@qq.com"
+                }
+            ],
+            "description": "poster generator. 基于GD库的PHP海报生成器,返回base64",
+            "keywords": [
+                "gd",
+                "poster",
+                "海报"
+            ],
+            "support": {
+                "source": "https://github.com/taobali32/poster/tree/master"
+            },
+            "time": "2022-01-08T05:01:27+00:00"
         },
         {
             "name": "jxlwqq/id-validator",
@@ -3551,7 +3724,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "jtar/poster": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
