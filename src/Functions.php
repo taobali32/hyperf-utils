@@ -162,6 +162,12 @@ function jtarGetdistance($from,$to,$km=true,$decimal=2){
     return round($distance, $decimal);
 }
 
+/**
+ * @param object $dispatch
+ * @return object
+ * @throws \Psr\Container\ContainerExceptionInterface
+ * @throws \Psr\Container\NotFoundExceptionInterface
+ */
 function jtarEvent(object $dispatch): object
 {
     //EventDispatcherInterface

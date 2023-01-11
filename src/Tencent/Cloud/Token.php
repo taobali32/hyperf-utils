@@ -6,7 +6,8 @@ use QCloud\COSSTS\Sts;
 
 class Token
 {
-    public function get($secretId,$secretKey,$bucket,$app_id,$region,$allowPrefix = '*',$durationSeconds = 1800){
+    public function get($secretId,$secretKey,$bucket,$app_id,$region,$allowPrefix = '*',$durationSeconds = 1800)
+    {
         $sts = new Sts();
         $config = array(
             'url' => 'https://sts.tencentcloudapi.com/',

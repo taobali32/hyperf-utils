@@ -2,6 +2,9 @@
 
 namespace Jtar\Utils\Sms;
 use Hyperf\Guzzle\ClientFactory;
+use Jtar\Utils\Event\SmsSendAfterEvent;
+use Jtar\Utils\Event\SmsSendBeforeEvent;
+use function Han\Utils\jtarEvent;
 
 class DuanXinBao
 {
@@ -25,6 +28,8 @@ class DuanXinBao
     {
         $smsapi = "http://api.smsbao.com/";
 
+        jtarEvent(new SmsSendBeforeEvent(['sendText' => $sendText,'mobile' => $mobile]));
+//        event_add($event)
         $statusStr = array(
             "0" => "短信发送成功",
             "-1" => "参数不全",
@@ -52,9 +57,13 @@ class DuanXinBao
         $response = $clientFactory->create()->get($sendurl)->getBody();
         $result = json_decode($response, true);
 
-        if ($result == 0) {
-            return true;
-        }
+        $after = new SmsSendAfterEvent();
+        $after->result = ($result == 0) ? true : false;
+        $after->message = $statusStr[$result] ?? '短信发送失败';
+
+        jtarEvent($after);
+
+        if ($result == 0) return true;
 
         return $statusStr[$result] ?? '短信发送失败';
     }
