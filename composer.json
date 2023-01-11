@@ -30,7 +30,6 @@
         "hyperf/snowflake": "^3.0",
         "hyperf/utils": "^3.0",
         "nesbot/carbon": "^2.0",
-        "overtrue/flysystem-qiniu": "^3.2",
         "psr/container": "^1.0|^2.0",
         "psr/event-dispatcher": "^1.0",
         "qcloud_sts/qcloud-sts-sdk": "^3.0",

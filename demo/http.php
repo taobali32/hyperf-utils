@@ -11,7 +11,7 @@ try {
 
     $http = new Http();
 
-    $uri = "http://web.hf.api.jiabaoleshop.com/api/v1/user_side/hf/get_history_mobile";
+    $uri = "xxx";
     $res = $http->get($uri);
 
     var_dump(111);
