@@ -33,6 +33,7 @@
         "nesbot/carbon": "^2.0",
         "psr/container": "^1.0|^2.0",
         "psr/event-dispatcher": "^1.0",
+        "qcloud/cos-sdk-v5": "^2.6",
         "qcloud_sts/qcloud-sts-sdk": "^3.0",
         "zoujingli/ip2region": "^2.0"
     },
