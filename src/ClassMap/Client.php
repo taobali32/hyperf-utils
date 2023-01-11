@@ -348,6 +348,7 @@ class Client extends GuzzleClient {
     {
         $array = XmlToArray::convert((string)$response->getBody());
 
+        var_dump(1111);
         return $array;
 
         $transformer = new ResultTransformer($this->cosConfig, $this->operation);
