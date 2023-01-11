@@ -103,7 +103,7 @@ class Image
 
         if ($source) return $result;
 
-        if ($result['Result'] == 0) return true;
+        if ($result['JobsDetail']['Result'] == 0) return true;
 
         return false;
     }
