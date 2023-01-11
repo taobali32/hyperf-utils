@@ -346,10 +346,7 @@ class Client extends GuzzleClient {
 
     public function responseToResultTransformer(ResponseInterface $response, RequestInterface $request, CommandInterface $command)
     {
-        $array = XmlToArray::convert((string)$response->getBody());
-
-        var_dump(1111);
-        return $array;
+        return XmlToArray::convert((string)$response->getBody());
 
         $transformer = new ResultTransformer($this->cosConfig, $this->operation);
         $transformer->writeDataToLocal($command, $request, $response);
