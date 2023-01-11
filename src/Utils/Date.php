@@ -150,8 +150,10 @@ class Date
      * @param $time2
      * @return mixed
      */
-    public function compareDate($time1,$op = '>',$time2)
+    public function compareDate($time1,$op = '>',$time2 = '')
     {
+        if ($time2 == '') $time2 = Carbon::now()->toDateTimeString();
+
         $method = [
             '>'     =>  'gt',
             '>='    =>  'gte',

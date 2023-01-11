@@ -11,6 +11,9 @@ declare(strict_types=1);
  */
 namespace Jtar\Utils;
 
+use Qcloud\Cos\Client;
+
+
 class ConfigProvider
 {
     public function __invoke(): array
@@ -24,6 +27,9 @@ class ConfigProvider
                 'scan' => [
                     'paths' => [
                         __DIR__,
+                    ],
+                    'class_map' => [
+                        Client::class => __DIR__ . '/ClassMap/Client.php',
                     ],
                 ],
             ],
