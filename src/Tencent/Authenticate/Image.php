@@ -50,7 +50,6 @@ class Image
      */
     public function check($image,$source = false,$dataid = '')
     {
-
         if (empty($image)) throw new InvalidArgumentException();
 
         $cosClient = new Client(
