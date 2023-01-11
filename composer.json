@@ -1,0 +1,55 @@
+{
+    "name": "jtar/hyperf-utils",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf"
+    ],
+    "description": "Utils for Hyperf.",
+    "autoload": {
+        "psr-4": {
+            "Jtar\\Utils\\": "src/"
+        },
+        "files": [
+            "src/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-bcmath": "*",
+        "hyperf/context": "^3.0",
+        "hyperf/guzzle": "^3.0",
+        "hyperf/http-server": "^3.0",
+        "hyperf/redis": "^3.0",
+        "hyperf/snowflake": "^3.0",
+        "hyperf/utils": "^3.0",
+        "nesbot/carbon": "^2.0",
+        "overtrue/flysystem-qiniu": "^3.2",
+        "psr/container": "^1.0|^2.0",
+        "psr/event-dispatcher": "^1.0",
+        "qcloud_sts/qcloud-sts-sdk": "^3.0",
+        "zoujingli/ip2region": "^2.0"
+    },
+    "suggest": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "analyse": "phpstan analyse --memory-limit 300M -l 5 ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Jtar\\Utils\\ConfigProvider"
+        }
+    }
+}
