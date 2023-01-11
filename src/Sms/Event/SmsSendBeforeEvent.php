@@ -1,6 +1,6 @@
 <?php
 
-namespace Jtar\Utils\Event;
+namespace Jtar\Utils\Sms\Event;
 
 class SmsSendBeforeEvent
 {

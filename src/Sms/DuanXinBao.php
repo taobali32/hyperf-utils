@@ -2,8 +2,8 @@
 
 namespace Jtar\Utils\Sms;
 use Hyperf\Guzzle\ClientFactory;
-use Jtar\Utils\Event\SmsSendAfterEvent;
-use Jtar\Utils\Event\SmsSendBeforeEvent;
+use Jtar\Utils\Sms\Event\SmsSendAfterEvent;
+use Jtar\Utils\Sms\Event\SmsSendBeforeEvent;
 use function Han\Utils\jtarEvent;
 
 class DuanXinBao
