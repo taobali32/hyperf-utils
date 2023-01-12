@@ -26,7 +26,9 @@
         "cvoid/easytree": "^2.0",
         "easyswoole/verifycode": "3.x",
         "endroid/qr-code": "^4.7",
+        "hyperf/config": "^3.0",
         "hyperf/context": "^3.0",
+        "hyperf/di": "^3.0",
         "hyperf/guzzle": "^3.0",
         "hyperf/http-server": "^3.0",
         "hyperf/redis": "^3.0",
@@ -41,7 +43,8 @@
         "qcloud/cos-sdk-v5": "^2.6",
         "qcloud_sts/qcloud-sts-sdk": "^3.0",
         "w7corp/easywechat": "^6.7",
-        "zoujingli/ip2region": "^2.0"
+        "zoujingli/ip2region": "^2.0",
+      "ext-redis": "*"
     },
     "suggest": {
     },
