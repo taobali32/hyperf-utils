@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5849ecc69d6bd162f97428a1505575b6",
+    "content-hash": "139f3ddc137d9c34e01fe0c91cc40df7",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -197,6 +197,101 @@
                 }
             ],
             "time": "2022-10-20T09:10:12+00:00"
+        },
+        {
+            "name": "easyswoole/spl",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/easy-swoole/spl.git",
+                "reference": "3d02bceaf1031a78f959d41dab04e37121f9c58c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/easy-swoole/spl/zipball/3d02bceaf1031a78f959d41dab04e37121f9c58c",
+                "reference": "3d02bceaf1031a78f959d41dab04e37121f9c58c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "easyswoole/phpunit": "^1.0",
+                "easyswoole/swoole-ide-helper": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EasySwoole\\Spl\\": "src/",
+                    "EasySwoole\\Spl\\Test\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "YF",
+                    "email": "291323003@qq.com"
+                }
+            ],
+            "description": "php stander lib",
+            "homepage": "https://www.easyswoole.com/",
+            "keywords": [
+                "async",
+                "easyswoole",
+                "framework",
+                "swoole"
+            ],
+            "support": {
+                "issues": "https://github.com/easy-swoole/spl/issues",
+                "source": "https://github.com/easy-swoole/spl/tree/1.4.1"
+            },
+            "time": "2022-02-02T12:04:48+00:00"
+        },
+        {
+            "name": "easyswoole/verifycode",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/easy-swoole/verify-code.git",
+                "reference": "d79497dc1b1c7bbaeceb0c62fea6a9a96f7957cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/easy-swoole/verify-code/zipball/d79497dc1b1c7bbaeceb0c62fea6a9a96f7957cb",
+                "reference": "d79497dc1b1c7bbaeceb0c62fea6a9a96f7957cb",
+                "shasum": ""
+            },
+            "require": {
+                "easyswoole/spl": "^1.0",
+                "ext-gd": "*",
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EasySwoole\\VerifyCode\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "YF",
+                    "email": "291323003@qq.com"
+                },
+                {
+                    "name": "evalor",
+                    "email": "mipone@foxmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/easy-swoole/verify-code/issues",
+                "source": "https://github.com/easy-swoole/verify-code/tree/3.0.2"
+            },
+            "time": "2020-07-28T04:12:59+00:00"
         },
         {
             "name": "endroid/qr-code",
