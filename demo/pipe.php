@@ -11,31 +11,74 @@ interface Pipe
     public function handle($body, Closure $next);
 }
 
-class JiFenProduct implements Pipe{
+class JiFenProduct implements Pipe
+{
     public function handle($body, Closure $next)
     {
-        $body['price'] = $body['price'] + 1;
+        $price = 0;
+        foreach ($body['data'] as $item) {
+
+            if ($item['type'] == 'ji_fen') {
+                $product_id = $item['product_id'];
+
+                $product_number = $item['number'];
+
+                $product_price = $item['price'];
+
+                $price += ($product_number * $product_price);
+            }
+
+        }
+        $body['price'] += $price;
         return $next($body);
     }
 }
 
-class NoneProduct implements Pipe{
+class NoneProduct implements Pipe
+{
     public function handle($body, Closure $next)
     {
-        $body['price'] = $body['price'] + 1;
+        $price = 0;
+        foreach ($body['data'] as $item) {
+
+            if ($item['type'] == 'none') {
+                $product_id = $item['product_id'];
+
+                $product_number = $item['number'];
+
+                $product_price = $item['price'];
+
+                $price += ($product_number * $product_price);
+            }
+
+        }
+        $body['price'] += $price;
         return $next($body);
     }
 }
 
-class YouHuiQuanProduct implements Pipe{
+class YouHuiQuanProduct implements Pipe
+{
     public function handle($body, Closure $next)
     {
-        $body['price'] = $body['price'] + 1;
+        $price = 0;
+        foreach ($body['data'] as $item) {
+
+            if ($item['type'] == 'you_hui_quan') {
+                $product_id = $item['product_id'];
+
+                $product_number = $item['number'];
+
+                $product_price = $item['price'];
+
+                $price += ($product_number * $product_price);
+            }
+
+        }
+        $body['price'] += $price;
         return $next($body);
     }
 }
-
-
 
 $data = [
     [
@@ -85,6 +128,7 @@ $pipes = [
     YouHuiQuanProduct::class
 ];
 
+//  放在hyperf执行
 $result = make(Pipeline::class)
     ->send($ren)
     ->through($pipes)
