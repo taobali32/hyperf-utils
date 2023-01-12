@@ -10,15 +10,15 @@ use Psr\Http\Message\ResponseInterface;
 trait ControllerTrait
 {
     /**
-     * Mine 请求处理
-     * MineRequest
+     *  请求处理
+     * JtarRequest
      */
     #[Inject]
     protected JtarRequest $request;
 
     /**
-     * Mine 响应处理
-     * MineResponse
+     *  响应处理
+     * JtarResponse
      */
     #[Inject]
     protected JtarResponse $response;

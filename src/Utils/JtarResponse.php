@@ -1,6 +1,7 @@
 <?php
 
 namespace Jtar\Utils\Utils;
+
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Hyperf\HttpServer\Response;
 use Psr\Http\Message\ResponseInterface;
