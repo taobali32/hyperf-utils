@@ -40,6 +40,7 @@
         "psr/event-dispatcher": "^1.0",
         "qcloud/cos-sdk-v5": "^2.6",
         "qcloud_sts/qcloud-sts-sdk": "^3.0",
+        "w7corp/easywechat": "^6.7",
         "zoujingli/ip2region": "^2.0"
     },
     "suggest": {
