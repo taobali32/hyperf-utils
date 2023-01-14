@@ -8,7 +8,6 @@ for ($i = 0; $i < 100000000;$i++){
 
     for($j = 0; $j < 100; $j++){
         $str .= "hyperf执行代码无法释放内存hyperf执行代码无法释放内存hyperf执行代码无法释放内存hyperf执行代码无法hyperf执行代码无法释放内存hyperf执行代码无法释放内存hyperf执行代码无法释放内存hyperf执行代码无法hyperf执行代码无法释放内存hyperf执行代码无法释放内存hyperf执行代码无法释放内存hyperf执行代码无法";
-
     }
 
     $arr[] = $str;

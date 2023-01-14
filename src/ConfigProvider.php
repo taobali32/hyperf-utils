@@ -11,6 +11,7 @@ declare(strict_types=1);
  */
 namespace Jtar\Utils;
 
+use EasyTree\Adapter\Handler\ArrayAdapter;
 use Qcloud\Cos\Client;
 
 
@@ -30,6 +31,7 @@ class ConfigProvider
                     ],
                     'class_map' => [
                         Client::class => __DIR__ . '/ClassMap/Client.php',
+                        ArrayAdapter::class => __DIR__ . '/ClassMap/ArrayAdapter.php',
                     ],
                 ],
             ],
