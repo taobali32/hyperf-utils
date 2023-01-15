@@ -136,7 +136,7 @@ function jtarContextSet($key,$value = ''){
 }
 
 function jtarContextGet($key,$default = null){
-    return (bool)\Hyperf\Context\Context::get($key, $default);
+    return \Hyperf\Context\Context::get($key, $default);
 }
 
 /**
