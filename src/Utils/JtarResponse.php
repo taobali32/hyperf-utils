@@ -25,8 +25,12 @@ class JtarResponse extends Response
             'data'    => &$data,
         ];
         $format = $this->toJson($format);
+
+        $search_type = jtarContextGet('source');
+
         return $this->getResponse()
             ->withHeader('Server', 'Jtar')
+            ->withAddedHeader((string)$search_type ? 'source' : '', $search_type)
             ->withAddedHeader('content-type', 'application/json; charset=utf-8')
             ->withBody(new SwooleStream($format));
     }
