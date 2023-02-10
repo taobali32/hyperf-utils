@@ -183,11 +183,11 @@ function jtarGetCachePrefix($name){
  *
  * @return string
  */
-function jtarGetOrderId()
+function jtarGetOrderId($prefix = 'T')
 {
     $no = jtarApp()->get(\Hyperf\Snowflake\IdGeneratorInterface::class)->generate();
 
-    $no = date('Ymd') . $no;
+    $no = $prefix . date('Ymd') . $no;
 
     return $no;
 }
