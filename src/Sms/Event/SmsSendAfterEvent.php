@@ -7,4 +7,7 @@ class SmsSendAfterEvent
     public bool $result = false;
 
     public string $message;
+
+    public array $inputData;
+
 }

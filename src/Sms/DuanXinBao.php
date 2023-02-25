@@ -60,6 +60,7 @@ class DuanXinBao
         $after = new SmsSendAfterEvent();
         $after->result = ($result == 0) ? true : false;
         $after->message = $statusStr[$result] ?? '短信发送失败';
+        $after->inputData = ['sendText' => $sendText,'mobile' => $mobile];
 
         jtarEvent($after);
 
