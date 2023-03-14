@@ -49,7 +49,7 @@ class DuanXinBao
         ];
 
         $user = $config['sms_account']; //短信平台帐号
-        $pass = md5($config['sms_password']); //短信平台密码
+        $pass = $config['sms_password']; //短信平台密码
 
         $sendurl = $smsapi . "sms?u=" . $user . "&p=" . $pass . "&m=" . $mobile . "&c=" . urlencode($sendText);
 
